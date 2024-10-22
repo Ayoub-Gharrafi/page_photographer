@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>About</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Merienda&family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@200;300;400;500;600&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500&display=swap');
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    }
+       header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+/*header .logo{
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}*/
+header .navigation{
+    position: relative;
+}
+header .navigation .navigation-items {
+    z-index: 888;       
+    display: flex;
+            justify-content: center;
+}
+header .navigation .navigation-items a{
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration:none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a::before{
+            content: "";
+            position: absolute;
+            background: #fff;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%); /* Center the line horizontally */
+            transition: 0.3s ease;
+}
+header .navigation .navigation-items a:hover::before{
+    width: 100%;
+}
+.home .content.active{
+    z-index: 888; /* Set a higher z-index value */ 
+    position: absolute; /* Set the position to relative or absolute */    
+    display: inline-flex;      
+    align-items: center;    
+    justify-content: center;    
+    text-align: center;    
+    color: #fff;
+    padding:30px; 
+    margin: 30px;
+    
+}
+.home .content h1{
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+    
+    
+}
+.home .content p{
+    margin-bottom: 40px;
+    padding:3%;
+}
+footer{
+    z-index: 888;
+    position: absolute;
+    left: 50%; /* Center the icons horizontally */
+    transform: translateX(-50%);
+    bottom: 30px;
+    display: inline-flex;
+    align-items: center;
+    transition: 0.5s ease;
+    margin: auto;
+    
+}
+footer span {
+    padding: auto;
+    margin: auto;
+}
+footer div.icons a{
+    color: #fff;
+    font-size: 1.6em;
+    transition: 0.3s ease;
+}
+footer div.icons a:not(:last-child){
+    margin: 40%;
+}
+footer div.icons a:hover{
+    transform: scale(1.3);
+}
+/*@media (max-width: 1040px){
+    header{
+        padding: 12px 20px;
+    }
+    section{
+        padding: 100px 20px;
+    }
+    .home .icons{
+        right: 15px;
+    }
+    header .navigation{
+        display: none;
+    }
+    header .navigation.active{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+         top: 0;
+        left:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+    }   
+     
+    header .navigation .navigation-items a{
+        color: #222;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+    header .navigation .navigation-items a::before{
+        background: #222;
+        height: 5px;
+    }
+    header .navigation.active .navigation-items{
+        background: #fff;
+        width: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    }
+    .menu-btn{
+        background: url(images/menu.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .menu-btn.active{
+        z-index: 999;
+        background: url(images/close.png)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+}
+@media (max-width: 560px){
+    .Home .content h1{
+        font-size: 3em;
+        line-height: 60px;
+    }
+}*/
+.home video{
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home::before{
+    z-index: 777;
+    content: "";
+    position: absolute;
+    background: rgba(169, 180, 239, 0.2);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+    </style>
+</head>
+<body>
+    <header>
+        
+        <div class="menu-btn"></div>
+        <div class="navigation">
+          <div class="navigation-items">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="#">Explore</a>
+            <a href="#">Gallery</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+    </header>
+    <section class="home">
+        <video class="video-slide active" src="vid1.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1>photographers</h1>
+            <p>Meet [Photographer's Name], a masterful visual storyteller with a passion for capturing the extraordinary in the ordinary.
+                Armed with a keen eye for detail, creative intuition, and technical finesse, [Photographer's Name] transforms moments into timeless narratives through the lens of their camera.
+                Whether documenting the raw emotions of human experiences, exploring the intricate beauty of nature, or expertly framing the essence of a subject, [Photographer's Name] possesses the unique ability to craft compelling visual stories.
+                With a portfolio that speaks volumes about their artistic prowess, [Photographer's Name] stands as an artisan who skillfully navigates the interplay of light, composition, and emotion to create captivating images that leave a lasting impression. Explore the world through [Photographer's Name]'s lens, 
+                where every photograph tells a rich and nuanced tale.</p>
+        
+  </section>
+<footer>
+            <div class="icons">
+            <span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </span>
+            <span>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            </span>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            
+            </div>
+        </footer>
+</body>  
+</html>

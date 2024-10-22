@@ -1,0 +1,269 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Merienda&family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@200;300;400;500;600&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500&display=swap');
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    
+    }
+    header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+/*header .logo{
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}*/
+header .navigation{
+    position: relative;
+}
+header .navigation .navigation-items {
+    z-index: 888;       
+    display: flex;
+    justify-content: center;
+}
+header .navigation .navigation-items a{
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration:none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a::before{
+            content: "";
+            position: absolute;
+            background: #fff;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%); /* Center the line horizontally */
+            transition: 0.3s ease;
+}
+header .navigation .navigation-items a:hover::before{
+    width: 100%;
+}
+        main
+{
+    z-index: 888;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin: auto;
+    padding: 2%;
+}
+
+.title
+{
+    z-index: 888;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 1.5% 0;
+}
+
+.title-info
+{
+    z-index: 999;
+	padding-bottom: 2%;
+}
+
+.form
+{
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 2%;
+}
+
+.input-group, .textarea-group
+{
+    padding: 1% 0;
+}
+
+input, textarea
+{
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    padding: 1.5%;
+    font-size: 20px;
+}
+
+input:focus, textarea:focus
+{
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid #69f0ae;
+}
+
+input::placeholder, textarea::placeholder
+{
+    color: transparent;
+}
+
+label
+{
+    color: #ffffff;
+    position: relative;
+    left: 0.5em;
+    top: -2em;
+	cursor: auto;
+    transition: 0.3s ease all;
+}
+
+input:focus ~ label, input:not(:placeholder-shown) ~ label
+{
+    top: -4em;
+    color: #69f0ae;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label
+{
+    top: -10.5em;
+    color: #69f0ae;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.button-div
+{
+    display: flex;
+    justify-content: center;
+}
+
+button
+{
+    padding: 2%;
+    width: 50%;
+    border: 1px solid;
+    border-color: #212121;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    box-shadow: 0 0 10px #212121;
+}
+
+button:hover
+{
+    background-color: #424242;
+    color: #69f0ae;
+    cursor: pointer;
+}
+.home video{
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.menu-btn{
+        background-size: 30px;
+        background-position: center;
+        
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .menu-btn.active{
+        z-index: 999;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+.home::before{
+    z-index: 777;
+    content: "";
+    position: absolute;
+    background: rgba(169, 180, 239, 0.2);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+    </style>
+</head>
+<body>
+    <section class="home">
+        <video class="video-slide active" src="vid1.mp4" autoplay muted loop></video>
+    </section>
+    <header>
+        
+        <div class="menu-btn"></div>
+        <div class="navigation">
+          <div class="navigation-items">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="#">Explore</a>
+            <a href="#">Gallery</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+    </header>
+ <main>
+            <div class="title">Contact us</div>
+            <div class="title-info">We'll get back to you soon!</div>
+
+            <form action="" method="" class="form">
+                <div class="input-group">
+                    <input type="text" name="first_name" id="first-name" placeholder="First name">
+                    <label for="first-name">First name</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" name="last_name" id="last-name" placeholder="Last Name">
+                    <label for="last-name">Last name</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" name="e-mail" id="e-mail" placeholder="e-mail">
+                    <label for="e-mail">e-mail</label>
+                </div>
+
+                <div class="textarea-group">
+                    <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
+                    <label for="message">Message</label>
+                </div>
+
+                <div class="button-div">
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </main>   
+</body>
+</html>  
+</body>
+</html>
